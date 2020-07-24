@@ -32,8 +32,8 @@ def exchange_apples(you, me):
 #so that "you" and "me" will exchange ALL their apples with one another?
 #Do you need a temporary variable to store one of the values?
 #You may need more than one line of code to do that, which is OK. 
-    me.apples = johanna.apples
-    you.apples = martin.apples
+    me.apples = martin.apples
+    you.apples = johanna.apples
     return you.apples, me.apples
     
 def exchange_ideas(you, me):
@@ -44,8 +44,9 @@ def exchange_ideas(you, me):
     #each idea attribute? Do you need a temporary variable to store 
     #the sum of ideas, or can you find another way? 
     #Use as many lines of code as you need here.
-    you.ideas = johanna.ideas + martin.ideas
-    me.ideas = johanna.ideas + martin.ideas
+    temp = johanna.ideas
+    you.ideas += martin.ideas
+    me.ideas += temp
     return you.ideas, me.ideas
 
 exchange_apples(johanna, martin)
